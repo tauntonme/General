@@ -2,3 +2,6 @@ Words about IO expansion board goes here
 J.F.
 20230718
 
+Production files in Plots folder. Contains all files required for pcb production.
+Created using EasyPC ver 26.0.2
+
