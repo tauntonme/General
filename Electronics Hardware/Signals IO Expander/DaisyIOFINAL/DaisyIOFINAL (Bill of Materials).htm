@@ -1,0 +1,520 @@
+<html>
+<head>
+<title>Bill Of Materials</title>
+<style>
+/*--- Style Sheet for BOM Composer -----------------------------------------*/
+
+/*--------------------------------------------------------------------------*/
+/* You can edit this style sheet, or take a copy and give it the same name  */ 
+/* as the template (.BCT) file for your own BOM Composer report. This is a  */
+/* standard CSS file so you should be able to tailor it to fit your own     */
+/* needs quite easily.                                                      */
+/*--------------------------------------------------------------------------*/   
+
+/*--- Base styles ----------------------------------------------------------*/
+
+* { font-family:Verdana,Tahoma,Arial,Times; font-size:8pt; color:#404040; }
+body { margin:0; }
+
+h2 { font-size:10pt; }
+h3 { font-size:9pt; }
+pre { font-family:Lucida Console,Courier New, Courier; }
+
+/*--- Headings -------------------------------------------------------------*/
+
+h2 { color:white; background-color:teal; width:700px; padding:5px; display:block; }
+h3 { width:700px; }
+
+/*--- Headings for particular sections in the report -----------------------*/
+
+h3.Side { color:teal; border-bottom:2px solid teal; }
+h3.Section { color:teal; }
+h3.Variant { background-color:#ccf; padding:5px; }
+
+/*--- Physical layout (controls page width) --------------------------------*/
+
+div.header { width:700px; }
+div.contents { padding:5px; }
+div.footer { padding:5px; }
+
+/*--- Hyperlinks -----------------------------------------------------------*/
+a:hover { color:#FF0000; }
+a.fixedlink { font-family:Lucida Console,Courier New, Courier; }
+a.link { }
+a.link:hover { color:#FF0000; }
+    
+/*--- Table settings -------------------------------------------------------*/
+table { width:700px; }
+td.ruledbelow { border-bottom:1px solid #eee; }
+td.ruledbelowheader { border-bottom:1px solid #a0d0d0; }
+td.ruledabovefooter { border-top:1px solid #a0d0d0; }
+td.ruledbelowfooter { border-bottom:1px solid #a0d0d0; }
+tr.evenrow { }
+
+/*--- Controlling widths of columns ----------------------------------------*/
+/* The class name (after the dot) is matched to your column heading         */
+
+td.component { width:40%; }
+td.names { width:25%; }
+td.value { width:15% }
+td.quantity { width:10%; }
+td.cost { width:10%; }
+
+/*--- Overrides when Printing ----------------------------------------------*/
+
+@media print{
+    a { text-decoration:none; color:#000; }
+}
+
+/*--- End Style Sheet for BOM Composer -------------------------------------*/
+</style>
+</head>
+<body oncontextmenu="return false;">
+<div class="header"></div>
+<div class="contents">
+<a name="$$TOP"></a><a name="TITLE"></a><h2>Bill Of Materials</h2>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top">Report Written:</td>
+   <td valign="top">Wednesday, May 31, 2023</td>
+  </tr>
+  <tr>
+   <td valign="top">Project Path:</td>
+   <td valign="top">C:\EasyPC_Projects_Oct22\DaisyIOFINAL\DaisyIOFINAL.prj</td>
+  </tr>
+  <tr>
+   <td valign="top">Design Path:</td>
+   <td valign="top">C:\EasyPC_Projects_Oct22\DaisyIOFINAL\DaisyIOFINAL.pcb</td>
+  </tr>
+  <tr>
+   <td valign="top">Design Title:</td>
+   <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+   <td valign="top">Created:</td>
+   <td valign="top">28/05/2023 11:32:32</td>
+  </tr>
+  <tr>
+   <td valign="top">Last Saved:</td>
+   <td valign="top">31/05/2023 09:58:45</td>
+  </tr>
+  <tr>
+   <td valign="top">Editing Time:</td>
+   <td valign="top">3435 min</td>
+  </tr>
+  <tr>
+   <td valign="top">Units:</td>
+   <td valign="top">thou (precision 0)</td>
+  </tr>
+</table>
+<br/><div id="bomtable">
+<a name="Top"></a><h3 class="Side">Components on Top Side</h3>
+<br/><a name="ICs"></a><h3 class="Section">ICs</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">74HC595D</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">IC1, IC6</td>
+   <td valign="top" class="quantity ruledbelow" align="right">2</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.12</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>2</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>1.12</b></td>
+  </tr>
+</table>
+<a name="Capacitors"></a><h3 class="Section">Capacitors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">C0603</td>
+   <td valign="top" class="value ruledbelow" align="left">100n</td>
+   <td valign="top" class="names ruledbelow" align="left">C17-20</td>
+   <td valign="top" class="quantity ruledbelow" align="right">4</td>
+   <td valign="top" class="cost ruledbelow" align="right">0.20</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">C4U7_50V_1206</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">C21-24</td>
+   <td valign="top" class="quantity ruledbelow" align="right">4</td>
+   <td valign="top" class="cost ruledbelow" align="right">0.88</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>8</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>1.08</b></td>
+  </tr>
+</table>
+<a name="Diodes"></a><h3 class="Section">Diodes</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">CL15M35</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">D65, D67, D69, D71</td>
+   <td valign="top" class="quantity ruledbelow" align="right">4</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.88</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">BAL99</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">D66, D68, D70, D72</td>
+   <td valign="top" class="quantity ruledbelow" align="right">4</td>
+   <td valign="top" class="cost ruledbelow" align="right">0.20</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>8</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>2.08</b></td>
+  </tr>
+</table>
+<a name="Connectors"></a><h3 class="Section">Connectors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">MC-254-16-LL-ST-DIP</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">J1-2</td>
+   <td valign="top" class="quantity ruledbelow" align="right">2</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.16</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">CTB1202_8BK</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">J3-6</td>
+   <td valign="top" class="quantity ruledbelow" align="right">4</td>
+   <td valign="top" class="cost ruledbelow" align="right">2.24</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>6</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>3.40</b></td>
+  </tr>
+</table>
+<a name="Resistors"></a><h3 class="Section">Resistors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">MCWR06X1002FTL</td>
+   <td valign="top" class="value ruledbelow" align="left">1k</td>
+   <td valign="top" class="names ruledbelow" align="left">R2, R6, R8, R12, R14, R18, R20, R24, R26, R30, R32, R36, R38, R42, R44, R48, R50, R54, R56, R60, R62, R66, R68, R72, R74, R78, R80, R84, R86, R90, R92, R96-97</td>
+   <td valign="top" class="quantity ruledbelow" align="right">33</td>
+   <td valign="top" class="cost ruledbelow" align="right">0.66</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>33</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>0.66</b></td>
+  </tr>
+</table>
+<a name="Transistors"></a><h3 class="Section">Transistors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">BC846</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">Q2, Q5, Q8, Q11, Q14, Q17, Q20, Q23, Q26, Q29, Q32, Q35, Q38, Q41, Q44, Q47</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.49</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">2N7002</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">Q3, Q6, Q9, Q12, Q15, Q18, Q21, Q24, Q27, Q30, Q33, Q36, Q39, Q42, Q45, Q48</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">2.51</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>32</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>4.00</b></td>
+  </tr>
+</table>
+<a name="Others"></a><h3 class="Section">Others</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">MP008254</td>
+   <td valign="top" class="value ruledbelow" align="left">LED Blu</td>
+   <td valign="top" class="names ruledbelow" align="left">LED1, LED3, LED5, LED7, LED9, LED11, LED13, LED15, LED17, LED19, LED21, LED23, LED25, LED27, LED29, LED31</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.92</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">MP008254</td>
+   <td valign="top" class="value ruledbelow" align="left">LED Red</td>
+   <td valign="top" class="names ruledbelow" align="left">LED2, LED4, LED6, LED8, LED10, LED12, LED14, LED16, LED18, LED20, LED22, LED24, LED26, LED28, LED30, LED32</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.92</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">TESTPOINT</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">P1-4</td>
+   <td valign="top" class="quantity ruledbelow" align="right">4</td>
+   <td valign="top" class="cost ruledbelow" align="right">0.00</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>36</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>3.84</b></td>
+  </tr>
+</table>
+<a name="Totals"></a><h3 class="Section">Totals for Top Side</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter" align="right"><b>125</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter" align="right"><b>16.18</b></td>
+  </tr>
+</table>
+<a name="Bottom"></a><h3 class="Side">Components on Bottom Side</h3>
+<br/><a name="ICs"></a><h3 class="Section">ICs</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">74HC597D</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">IC2, IC4</td>
+   <td valign="top" class="quantity ruledbelow" align="right">2</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.42</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">74HC7541D,112</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">IC3, IC5</td>
+   <td valign="top" class="quantity ruledbelow" align="right">2</td>
+   <td valign="top" class="cost ruledbelow" align="right">3.54</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>4</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>4.96</b></td>
+  </tr>
+</table>
+<a name="Capacitors"></a><h3 class="Section">Capacitors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">C0603</td>
+   <td valign="top" class="value ruledbelow" align="left">100n</td>
+   <td valign="top" class="names ruledbelow" align="left">C1-16</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">0.80</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>16</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>0.80</b></td>
+  </tr>
+</table>
+<a name="Diodes"></a><h3 class="Section">Diodes</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">BAL99</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">D1, D4-5, D8-9, D12-13, D16-17, D20-21, D24-25, D28-29, D32-33, D36-37, D40-41, D44-45, D48-49, D52-53, D56-57, D60-61, D64</td>
+   <td valign="top" class="quantity ruledbelow" align="right">32</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.60</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">CL15M35</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">D2, D6, D10, D14, D18, D22, D26, D30, D34, D38, D42, D46, D50, D54, D58, D62</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">7.52</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">CL05M6F</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">D3, D7, D11, D15, D19, D23, D27, D31, D35, D39, D43, D47, D51, D55, D59, D63</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">7.04</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>64</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>16.16</b></td>
+  </tr>
+</table>
+<a name="Resistors"></a><h3 class="Section">Resistors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">MCWR06X1002FTL</td>
+   <td valign="top" class="value ruledbelow" align="left">1k</td>
+   <td valign="top" class="names ruledbelow" align="left">R1, R3-5, R7, R9-11, R13, R15-17, R19, R21-23, R25, R27-29, R31, R33-35, R37, R39-41, R43, R45-47, R49, R51-53, R55, R57-59, R61, R63-65, R67, R69-71, R73, R75-77, R79, R81-83, R85, R87-89, R91, R93-95</td>
+   <td valign="top" class="quantity ruledbelow" align="right">64</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.28</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>64</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>1.28</b></td>
+  </tr>
+</table>
+<a name="Transistors"></a><h3 class="Section">Transistors</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>Component</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>Value</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>Names</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow" align="left">BC856</td>
+   <td valign="top" class="value ruledbelow" align="left">&nbsp;</td>
+   <td valign="top" class="names ruledbelow" align="left">Q1, Q4, Q7, Q10, Q13, Q16, Q19, Q22, Q25, Q28, Q31, Q34, Q37, Q40, Q43, Q46</td>
+   <td valign="top" class="quantity ruledbelow" align="right">16</td>
+   <td valign="top" class="cost ruledbelow" align="right">1.98</td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>Sub-total:</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter ruledabovefooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>16</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter ruledabovefooter" align="right"><b>1.98</b></td>
+  </tr>
+</table>
+<a name="Totals"></a><h3 class="Section">Totals for Bottom Side</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter" align="right"><b>164</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter" align="right"><b>25.18</b></td>
+  </tr>
+</table>
+<a name="Totals"></a><h3 class="Section">Grand Totals</h3>
+<table cellpadding="2" cellspacing="0">
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowheader" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowheader" align="right"><b>Quantity</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowheader" align="right"><b>Cost</b></td>
+  </tr>
+  <tr>
+   <td valign="top" class="component ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="value ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="names ruledbelow ruledbelowfooter" align="left"><b>&nbsp;</b></td>
+   <td valign="top" class="quantity ruledbelow ruledbelowfooter" align="right"><b>289</b></td>
+   <td valign="top" class="cost ruledbelow ruledbelowfooter" align="right"><b>41.36</b></td>
+  </tr>
+</table>
+</div>
+</div>
+<div class="footer"><table width="700" cellpadding="0" cellspacing="0"><td align="left"><!--img src="file://C:/Users/flood/Documents/Easy-PC26/Report Templates\No1 Systems.jpg"--></td><td align="right"><!--img src="file://C:/Users/flood/Documents/Easy-PC26/Report Templates\EasyPC.jpg"--></td></table>
+
+</div>
+</body></html>

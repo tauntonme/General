@@ -1,0 +1,18 @@
+Design Integrity Status Report
+------------------------------
+
+Report Written:     Wednesday, May 31, 2023
+Project Path:       C:\EasyPC_Projects_Oct22\DaisyIOFINAL\DaisyIOFINAL.prj
+Design Path:        C:\EasyPC_Projects_Oct22\DaisyIOFINAL\DaisyIOFINAL.pcb
+Design Title:       
+Created:            28/05/2023 11:32:32
+Last Saved:         31/05/2023 14:25:31
+Editing Time:       3737 min
+Units:              thou (precision 0)
+
+
+Checking integrity of Schematic and Pcb designs in project "DaisyIOFINAL"
+=========================================================================
+
+
+End Of Report.
